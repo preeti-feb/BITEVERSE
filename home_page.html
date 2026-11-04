@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BITEVERSE | FOOD WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        :root {
+            --background-color: #080808;
+            --main-text: #f5f1e8;
+            --hover-effect: #ff4b1f;
+            --border: #dca46b;
+            --paragragh: #bdbab5;
+        }
+
+        body {
+            background-color: var(--background-color);
+            margin: 0;
+            color: var(--main-text);
+        }
+
+        .home-section {
+            background-image: url(Images/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .name {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name img {
+            width: 90px;
+            height: auto;
+            display: block;
+            border-radius: 100px;
+        }
+
+        .name h1 {
+            color: var(--main-text);
+        }
+
+        .name h1 span {
+            color: var(--hover-effect);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--main-text);
+        }
+
+        li a:hover {
+            color: #eb4d26;
+            text-decoration: underline;
+
+            text-underline-offset: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--main-text);
+            border: 1px solid var(--hover-effect);
+            padding: 17px;
+            border-radius: 100px;
+        }
+
+        .menu a:hover {
+            color: var(--hover-effect);
+            border: 1px solid var(--border);
+        }
+
+        .home {
+            margin-top: 5%;
+            color: white;
+            width: 25%;
+            padding: 5px;
+            margin-left: 6%;
+        }
+
+        .home h3,
+        .home h1,
+        .home p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .home h3 {
+            color: var(--paragragh);
+            font-size: 15px;
+        }
+
+        .home h3 span {
+            color: var(--hover-effect);
+        }
+
+        .home h1 {
+            font-size: 55px;
+            color: var(--main-text);
+        }
+
+        .home h1 span {
+            color: var(--hover-effect);
+            display: inline-block;
+            animation-name: move;
+            animation-delay: 0.5s;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        .home p {
+            color: var(--paragragh);
+            font-size: 17px;
+        }
+
+        .dish {
+            margin-top: 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            padding: 5px;
+        }
+
+        .dishes a {
+            text-decoration: none;
+            color: var(--background-color);
+            background-color: var(--hover-effect);
+            border-radius: 30px;
+            padding: 15px;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+
+        .dishes a:hover {
+            color: var(--hover-effect);
+            background-color: var(--main-text);
+            font-weight: 500;
+        }
+
+        .dish span {
+            color: var(--hover-effect);
+        }
+
+        .dish p {
+            color: var(--main-text);
+            font-size: medium;
+        }
+
+        footer {
+            border-top: 1px solid var(--hover-effect);
+        }
+
+        .boxes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .boxes span {
+            color: var(--hover-effect);
+            font-size: 30px;
+        }
+
+        .box {
+            align-items: center;
+            display: flex;
+            padding: 15px;
+            gap: 20px;
+            background-color: var(--background-color);
+        }
+
+        .box i {
+            font-size: 60px;
+        }
+
+        .small-box {
+            line-height: 0.4;
+        }
+
+        .small-box h4 {
+            color: var(--main-text);
+        }
+
+        .small-box p {
+            color: var(--paragragh);
+        }
+
+        @keyframes move {
+            from {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-section">
+        <header>
+            <div class="name">
+                <img src="Images/website_logo.png" alt="Website Logo | BITEVERSE" />
+                <h1>BITE<span>VERSE</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home_page.html">Home</a></li>
+                    <li><a href="about_page.html">About</a></li>
+                    <li><a href="menu_page.html">Menu</a></li>
+                    <li><a href="dishes_gallery.html">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu">
+                <a href="menu_page.html">Explore Menu &emsp;➜</a>
+            </div>
+        </header>
+    
+        <main>
+            <section class="home">
+                <h3>GOOD FOOD <span>/</span> BEYOND ORDINARY</h3>
+                <h1>TASTE THE <span>UNIVERSE</span></h1>
+                <p>
+                    Fresh ingredients. Bold flavors. Unforgettable experiences. Because
+                    good food isn't just eaten, it's felt.
+                </p>
+                <div class="dish">
+                    <div class="dishes">
+                        <a href="dishes_gallery.html">Explore Dishes &nbsp;➜</a>
+                    </div>
+                    &nbsp; <span>──</span>
+                    <p>REAL FOOD<br />REAL HAPPINESS</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="boxes">
+            <div class="box">
+                <i class="fa-solid fa-leaf" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>FRESH INGREDIENTS</h4>
+                    <p>Always the best</p>
+                </div>
+            </div>
+            &emsp;<span>│</span>
+            <div class="box">
+                <i class="fa-solid fa-utensils" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>BEST FOOD</h4>
+                    <p>Best quality</p>
+                </div>
+            </div>
+            &emsp;<span>│</span>
+            <div class="box">
+                <i class="fa-regular fa-heart" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>UNIQUE FLAVORS</h4>
+                    <p>A taste like no other</p>
+                </div>
+            </div>
+            &emsp;<span>│</span>
+            <div class="box">
+                <i class="fa-regular fa-star" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>PREMIUM EXPERIENCE</h4>
+                    <p>More than just a meal</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
