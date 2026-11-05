@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BITEVERSE | ABOUT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        :root {
+            --background-color: #080808;
+            --main-text: #f5f1e8;
+            --hover-effect: #ff4b1f;
+            --border: #dca46b;
+            --paragragh: #bdbab5;
+        }
+
+        body {
+            background-color: var(--background-color);
+            margin: 0;
+            color: var(--main-text);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .name {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name img {
+            width: 90px;
+            height: auto;
+            display: block;
+            border-radius: 100px;
+        }
+
+        .name h1 {
+            color: var(--main-text);
+        }
+
+        .name h1 span {
+            color: var(--hover-effect);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--main-text);
+        }
+
+        li a:hover {
+            color: #eb4d26;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--main-text);
+            border: 1px solid var(--hover-effect);
+            padding: 17px;
+            border-radius: 100px;
+        }
+
+        .menu a:hover {
+            color: var(--hover-effect);
+            border: 1px solid var(--border);
+        }
+
+        .about1 {
+            background-image: url("Images/about-1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top: 1px solid var(--hover-effect);
+            border-bottom: 1px solid var(--hover-effect);
+        }
+
+        .left {
+            width: 30%;
+            margin: 3%;
+            padding: 7px;
+        }
+
+        .left h4,
+        .left h1,
+        .left p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .left h4 {
+            color: var(--hover-effect);
+            font-size: 20px;
+        }
+
+        .left h1 {
+            color: var(--main-text);
+            font-size: 75px;
+        }
+
+        .left h1 span {
+            color: var(--hover-effect);
+        }
+
+        .left p {
+            text-align: justify;
+            color: var(--paragragh);
+            font-size: 17px;
+        }
+
+        .about2 {
+            background-image: url("Images/about-2.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            min-height: 600px;
+
+            border-bottom: 1px solid var(--hover-effect);
+            overflow: hidden;
+        }
+
+        .left2 {
+            width: 30%;
+            margin-left: 3%;
+            margin-top: 0;
+            padding: 6px;
+
+            transform: translateY(50px);
+        }
+
+        .left2 h4,
+        .left2 h2,
+        .left2 p {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .left2 h4 {
+            color: var(--hover-effect);
+        }
+
+        .left2 h4 span {
+            color: var(--border);
+            animation-name: right-move;
+            display: inline-block;
+            animation-delay: 2s;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        .left2 h2 {
+            font-size: 45px;
+            color: var(--main-text);
+        }
+
+        .left2 h2 span {
+            color: var(--hover-effect);
+        }
+
+        .left2 p {
+            color: var(--paragragh);
+        }
+
+        .left2 p span {
+            color: var(--hover-effect);
+            animation-name: left-move;
+            display: inline-block;
+            animation-delay: 2s;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        .dishes {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dishes a {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--background-color);
+            background-color: var(--hover-effect);
+            border-radius: 30px;
+            padding: 15px 20px;
+            transition: 0.2s;
+        }
+
+        .dishes a:hover {
+            color: var(--hover-effect);
+            background-color: var(--main-text);
+            font-weight: 500;
+        }
+
+        footer {
+            border-top: 1px solid var(--hover-effect);
+        }
+
+        .boxes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .boxes span {
+            color: var(--hover-effect);
+            font-size: 30px;
+        }
+
+        .box {
+            align-items: center;
+            display: flex;
+            padding: 15px;
+            gap: 20px;
+            background-color: var(--background-color);
+        }
+
+        .box i {
+            font-size: 60px;
+        }
+
+        .small-box {
+            line-height: 0.4;
+        }
+
+        .small-box h4 {
+            color: var(--main-text);
+        }
+
+        .small-box p {
+            color: var(--paragragh);
+        }
+
+        @keyframes right-move {
+            from {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes left-move {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="name">
+            <img src="Images/website_logo.png" alt="Website Logo | BITEVERSE" />
+            <h1>BITE<span>VERSE</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="about_page.html">About</a></li>
+                <li><a href="menu_page.html">Menu</a></li>
+                <li><a href="dishes_gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu">
+            <a href="menu_page.html">Explore Menu &emsp;➜</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="about1">
+            <div class="left">
+                <h4>ABOUT US</h4>
+                <h1>Our Story <br /><span>& Passion</span></h1>
+                <p>
+                    At BITEVERSE, we believe food is more than just a meal- <br />
+                    it's an experience, a journey, and a universe of flavors.
+                </p>
+            </div>
+        </section>
+
+        <section class="about2">
+            <div class="left2">
+                <h4>OUR STORY <span>────</span></h4>
+                <h2>From a Simple Idea <br />to a <span>Flavorable Journey</span></h2>
+                <p>
+                    BITEVERSE started with a simple belief - that great food brings
+                    people together. What began as a small dream has now grown into a
+                    space where flavor, creativity and quality come together to give you
+                    something truely special.
+                </p>
+                <p>
+                    We use fresh ingredients, bold flavors and a lot of love to create
+                    dishes that don't just fill your stomach, but also make your day
+                    better. <br /><span>────</span>
+                </p>
+                <div class="dishes">
+                    <a href="#">Explore Dishes &nbsp;➜</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="boxes">
+            <div class="box">
+                <i class="fa-solid fa-leaf" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>FRESH INGREDIENTS</h4>
+                    <p>Always the best</p>
+                </div>
+            </div>
+            &emsp;<span>│</span>
+            <div class="box">
+                <i class="fa-solid fa-utensils" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>BEST FOOD</h4>
+                    <p>Best quality</p>
+                </div>
+            </div>
+            &emsp;<span>│</span>
+            <div class="box">
+                <i class="fa-regular fa-heart" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>UNIQUE FLAVORS</h4>
+                    <p>A taste like no other</p>
+                </div>
+            </div>
+            &emsp;<span>│</span>
+            <div class="box">
+                <i class="fa-regular fa-star" style="color: var(--hover-effect)"></i>
+                <div class="small-box">
+                    <h4>PREMIUM EXPERIENCE</h4>
+                    <p>More than just a meal</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
