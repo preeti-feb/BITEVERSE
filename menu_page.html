@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITEVERSE | MENU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --background-color: #080808;
+            --main-text: #F5F1E8;
+            --hover-effect: #FF4B1F;
+            --border: #DCA46B;
+            --paragragh: #BDBAB5;
+        }
+
+
+        body {
+            background-color: var(--background-color);
+            margin: 0;
+            color: var(--main-text);
+        }
+
+        .home-section {
+            background-image: url(Images/background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            min-height: 100vh;
+            /* margin-bottom: 10%; */
+        }
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            /* border: 1px solid red; */
+
+        }
+
+        .name {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name img {
+            width: 90px;
+            height: auto;
+            display: block;
+            /* border: 1px solid red; */
+            border-radius: 100px;
+        }
+
+        .name h1 {
+            color: var(--main-text);
+        }
+
+        .name h1 span {
+            color: var(--hover-effect);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--main-text);
+        }
+
+        li a:hover {
+            color: #eb4d26;
+            text-decoration: underline;
+
+            text-underline-offset: 10px;
+            /* animation-name: line;
+            animation-iteration-count: unset; */
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--main-text);
+            border: 1px solid var(--hover-effect);
+            padding: 17px;
+            border-radius: 100px;
+        }
+
+        .menu a:hover {
+            color: var(--hover-effect);
+            border: 1px solid var(--border);
+            /* justify-content: space-between; */
+        }
+
+        .menu-intro {
+            background-image: url(Images/menu-into.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* min-height: 100vh; */
+            /* min-height: 600px; */
+            border-top: 1px solid var(--hover-effect);
+            border-bottom: 1px solid var(--hover-effect);
+            overflow: hidden;
+        }
+
+        .left {
+            width: 25%;
+            padding: 6px;
+            margin: 3%;
+
+        }
+
+        .left h3,
+        .left h1,
+        .left p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .left h3 {
+            color: var(--hover-effect);
+        }
+
+        .left span {
+            color: var(--border);
+        }
+
+        .left h1 {
+            font-size: 50px;
+            color: var(--main-text);
+        }
+
+        .left h1 span {
+            color: var(--hover-effect);
+        }
+
+        .left p {
+            color: var(--paragragh);
+        }
+
+        .menu_dishes {
+            background-color: var(--background-color);
+        }
+
+        .options {
+            /* border: 1px solid red; */
+            padding: 25px;
+            margin-top: 3%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .options a {
+            display: block;
+            text-decoration: none;
+            border: 1px solid var(--hover-effect);
+            color: var(--main-text);
+            padding: 17px;
+            width: 70px;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        .options a:hover {
+            background-color: var(--hover-effect);
+            color: var(--background-color);
+            font-weight: 700;
+        }
+
+        .menu_cards {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+            margin: 2%;
+        }
+
+        .cards {
+            min-width: 0;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            /* padding: 10px; */
+        }
+
+        .cards img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content {
+            padding: 10px;
+
+        }
+
+        .content h2 {
+            color: var(--main-text);
+        }
+
+        .content p {
+            color: var(--paragragh);
+            font-size: 20px;
+        }
+
+        .content p:nth-of-type(2) {
+            color: var(--hover-effect);
+            /* font-size: 25px; */
+
+            animation-name: second;
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .add_cart {
+            border: 1px solid var(--hover-effect);
+            display: flex;
+            padding: 10px;
+            gap: 10px;
+            margin: 3%;
+            margin-left: 30%;
+            width: 60%;
+            justify-content: center;
+            border-radius: 30px;
+        }
+
+        .add_cart i {
+            font-size: 20px;
+            color: var(--hover-effect);
+        }
+
+        .add_cart a {
+            display: block;
+            text-decoration: none;
+            color: var(--main-text);
+            /* text-align: center; */
+            /* align-items: center; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="name">
+            <img src="Images/website_logo.png" alt="Website Logo | BITEVERSE">
+            <h1>BITE<span>VERSE</span></h1>
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="about_page.html">About</a></li>
+                <li><a href="menu_page.html">Menu</a></li>
+                <li><a href="dishes_gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+        <div class="menu">
+            <a href="menu_page.html">Explore Menu &emsp;➜</a>
+        </div>
+
+    </header>
+
+
+    <main>
+        <section class="menu-intro">
+            <div class="left">
+                <h3>OUR MENU &emsp;<span>────</span></h3>
+                <h1>Good Food <br>
+                    <span>Great Choices</span>
+                </h1>
+                <p>From classic favorites to signature creation, <br>
+                    our menu is designed to bring you bold flavors, <br>
+                    fresh ingredients and unforgettable moments.</p>
+            </div>
+        </section>
+
+        <section class="menu_dishes">
+            <div class="options">
+                <a href="#">All</a>
+                <a href="#">Pizzas</a>
+                <a href="#">Burgers</a>
+                <a href="#">Pasta</a>
+                <a href="#">Appetizers</a>
+                <a href="#">Drinks</a>
+                <a href="#">Deserts</a>
+            </div>
+
+            <div class="menu_cards">
+                <div class="cards">
+                    <img src="Images/Menu/pizza_margherita.png" alt="Margherita Pizza">
+                    <div class="content">
+                        <h2>Margherita Pizza</h2>
+                        <p>Classic blend of mozzarella, fresh tomatoes and basil.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>12.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/pizza_pepperoni.png" alt="Pepperoni Pizza">
+                    <div class="content">
+                        <h2>Pepperoni Pizza</h2>
+                        <p>Loaded with premium pepperoni and melted cheese.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>14.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/pizza_bbq_chicken.png" alt="BBQ Chicken Pizza">
+                    <div class="content">
+                        <h2>BBQ Chicken Pizza</h2>
+                        <p>Grilled chicken, BBQ sauce, onions and mozzarella.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>15.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/pizza_veggie.png" alt="Veggie Pizza">
+                    <div class="content">
+                        <h2>Veggie Pizza</h2>
+                        <p>Fresh vegetables, olives, mushrooms, and cheese.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>13.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/burger_classic.png" alt="Classic Burger">
+                    <div class="content">
+                        <h2>Classic Burger</h2>
+                        <p>Juicy beef patty, fresh lettuce, tomato, cheese and special sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>10.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/burger_bbq_bacon.png" alt="BBQ Bacon Burger">
+                    <div class="content">
+                        <h2>BBQ Bacon Burger</h2>
+                        <p>Beef patty, crispy bacon, cheddar, BBQ sauce and lettuce.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>12.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/burger_chicken.png" alt="Chicken Burger">
+                    <div class="content">
+                        <h2>Chicken Burger</h2>
+                        <p>Crispy chicken, fresh veggies and house sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>10.49</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/burger_veggie.png" alt="Veggie Burger">
+                    <div class="content">
+                        <h2>Veggie Burger</h2>
+                        <p>Crispy patty, fresh veggies and special sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign fa-float"></i>9.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/pasta_fettuccine_alfredo.png" alt="Fettuccine Alfredo">
+                    <div class="content">
+                        <h2>Fettuccine Alfredo</h2>
+                        <p>Creamy Alfredo sauce with parmesan cheese and tender pasta.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 13.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/pasta_penne_arrabbiata.png" alt="Penne Arrabbiata">
+                    <div class="content">
+                        <h2>Penne Arrabbiata</h2>
+                        <p>Italian penne pasta tossed in spicy tomato and garlic sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 11.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/pasta_spaghetti_bolognese.png" alt="Spaghetti Bolognese">
+                    <div class="content">
+                        <h2>Spaghetti Bolognese</h2>
+                        <p>Classic spaghetti served with rich and flavorful meat sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 14.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/pasta_pesto.png" alt="Pesto Pasta">
+                    <div class="content">
+                        <h2>Pesto Pasta</h2>
+                        <p>Fresh basil pesto with parmesan cheese, herbs and olive oil.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 12.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/appetizer_mozzarella_sticks.png" alt="Mozzarella Sticks">
+                    <div class="content">
+                        <h2>Mozzarella Sticks</h2>
+                        <p>Crispy golden mozzarella sticks served with dipping sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 7.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/appetizer_loaded_nachos.png" alt="Loaded Nachos">
+                    <div class="content">
+                        <h2>Loaded Nachos</h2>
+                        <p>Crunchy nachos topped with melted cheese, salsa and jalapenos.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 8.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/appetizer_garlic_bread.png" alt="Garlic Bread">
+                    <div class="content">
+                        <h2>Garlic Bread</h2>
+                        <p>Toasted bread infused with garlic butter and fresh herbs.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 5.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/appetizer_chicken_wings.png" alt="Chicken Wings">
+                    <div class="content">
+                        <h2>Chicken Wings</h2>
+                        <p>Juicy chicken wings coated in a delicious spicy BBQ glaze.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 10.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/drink_classic_cola.png" alt="Classic Cola">
+                    <div class="content">
+                        <h2>Classic Cola</h2>
+                        <p>Refreshing chilled cola served with ice cubes.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 2.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/drink_orange_juice.png" alt="Fresh Orange Juice">
+                    <div class="content">
+                        <h2>Fresh Orange Juice</h2>
+                        <p>Freshly squeezed oranges packed with natural citrus flavor.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 4.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/drink_strawberry_lemonade.png" alt="Strawberry Lemonade">
+                    <div class="content">
+                        <h2>Strawberry Lemonade</h2>
+                        <p>Sweet strawberries blended with fresh lemon and ice.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 5.49</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/drink_iced_coffee.png" alt="Iced Coffee">
+                    <div class="content">
+                        <h2>Iced Coffee</h2>
+                        <p>Chilled creamy coffee topped with chocolate and ice.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 5.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/dessert_chocolate_cake.png" alt="Chocolate Cake">
+                    <div class="content">
+                        <h2>Chocolate Cake</h2>
+                        <p>Rich chocolate cake layered with smooth chocolate frosting.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 6.99</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="cards">
+                    <img src="Images/Menu/dessert_cheesecake.png" alt="Cheesecake">
+                    <div class="content">
+                        <h2>Cheesecake</h2>
+                        <p>Classic creamy cheesecake topped with fresh berry sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 7.49</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/dessert_vanilla_ice_cream.png" alt="Vanilla Ice Cream">
+                    <div class="content">
+                        <h2>Vanilla Ice Cream</h2>
+                        <p>Silky vanilla ice cream drizzled with rich chocolate sauce.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 4.49</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <img src="Images/Menu/dessert_chocolate_lava_cake.png" alt="Chocolate Lava Cake">
+                    <div class="content">
+                        <h2>Chocolate Lava Cake</h2>
+                        <p>Warm chocolate cake with a delicious melted chocolate center.</p>
+                        <p><i class="fa-solid fa-dollar-sign"></i> 8.49</p>
+                    </div>
+                    <div class="add_cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
