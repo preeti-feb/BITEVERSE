@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITEVERSE | Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <style>
+        :root {
+            --background-color: #080808;
+            --main-text: #f5f1e8;
+            --hover-effect: #ff4b1f;
+            --border: #dca46b;
+            --paragragh: #bdbab5;
+        }
+
+        body {
+            background-color: var(--background-color);
+            margin: 0;
+            color: var(--main-text);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .name {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name img {
+            width: 90px;
+            height: auto;
+            display: block;
+            border-radius: 100px;
+        }
+
+        .name h1 {
+            color: var(--main-text);
+        }
+
+        .name h1 span {
+            color: var(--hover-effect);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: var(--main-text);
+        }
+
+        li a:hover {
+            color: #eb4d26;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--main-text);
+            border: 1px solid var(--hover-effect);
+            padding: 17px;
+            border-radius: 100px;
+        }
+
+        .menu a:hover {
+            color: var(--hover-effect);
+            border: 1px solid var(--border);
+        }
+
+        .intro {
+            background-image: url(Images/contact.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            min-height: 400px;
+            border-top: 1px solid var(--hover-effect);
+            border-bottom: 1px solid var(--hover-effect);
+        }
+
+        .left {
+            width: 20%;
+            margin: 3%;
+            padding: 5px;
+        }
+
+        .left h3,
+        .left h1,
+        .left p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .left h3 {
+            color: var(--main-text);
+            font-size: 17px;
+        }
+
+        .left h3 span {
+            color: var(--border);
+            animation-name: right-move;
+            display: inline-block;
+            animation-delay: 0.5s;
+            animation-duration: 1.2s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        }
+
+        .left h1 {
+            color: var(--main-text);
+            font-size: 45px;
+        }
+
+        .left h1 span {
+            color: var(--hover-effect);
+        }
+
+        .left p {
+            color: var(--paragragh);
+            font-size: 20px;
+        }
+
+        .contact {
+            background-image: url(Images/contact2.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .up {
+            margin: 4%;
+            width: 35%;
+            padding: 10px;
+        }
+
+        .up h2,
+        .up p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .up h2 {
+            font-size: 35px;
+            color: var(--main-text);
+        }
+
+        .up h2 span {
+            color: var(--hover-effect);
+        }
+
+        .up p {
+            color: var(--paragragh);
+            font-size: 20px;
+        }
+
+        .contact_info {
+            margin-bottom: 14%;
+            display: flex;
+        }
+
+        .info {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .box {
+            margin: 20px;
+            gap: 20px;
+            padding: 10px;
+            display: flex;
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            justify-content: center;
+        }
+
+        .box i {
+            padding: 10px;
+            color: var(--hover-effect);
+            font-size: 60px;
+        }
+
+        .detail {
+            margin: 5px;
+        }
+
+        .detail h3 {
+            color: var(--main-text);
+        }
+
+        .detail p {
+            color: var(--paragragh);
+        }
+
+        .customer_detail {
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            margin: 10px;
+            width: 40%;
+            padding: 2% 3%;
+        }
+
+        .customer_detail h2,
+        .customer_detail p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .customer_detail h2 {
+            color: var(--main-text);
+            font-size: 40px;
+        }
+        
+        .customer_detail p {
+            color: var(--paragragh);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .input_row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .input_row input {
+            width: 50%;
+        }
+
+        form input,
+        form textarea {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--main-text);
+            background-color: var(--background-color);
+            font-size: 16px;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border-color: var(--hover-effect);
+        }
+
+        form button {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--hover-effect);
+            color: var(--main-text);
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        footer{
+            background-color: var(--background-color);
+            border-top: 1px solid var(--hover-effect);
+            text-align: center;
+        }
+
+        footer h2{
+            color: var(--main-text);
+        }
+
+        footer h2 span{
+            color: var(--hover-effect);
+        }
+
+        footer h4{
+            color: var(--main-text);
+            font-size: 20px;
+        }
+
+        footer p{
+            color: var(--paragragh);
+        }
+
+        @keyframes right-move {
+            from {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="name">
+            <img src="Images/website_logo.png" alt="Website Logo | BITEVERSE">
+            <h1>BITE<span>VERSE</span></h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="about_page.html">About</a></li>
+                <li><a href="menu_page.html">Menu</a></li>
+                <li><a href="dishes_gallery.html">Gallery</a></li>
+                <li><a href="contact_page.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu">
+            <a href="menu_page.html">Explore Menu &emsp;➜</a>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="left">
+                <h3>Contact us&emsp;<span>────</span></h3>
+                <h1>Let's Start a <span>Conversation</span></h1>
+                <p>Have a question, suggestion? We would love to hear that.</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="up">
+                <h2>Let's Talk About <span><i>Good Food</i></span></h2>
+                <p>Every great experience begin with conversation.</p>
+            </div>
+
+            <div class="contact_info">
+                <div class="info">
+
+                    <div class="box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="detail">
+                            <h3>Email Us</h3>
+                            <p>preeti.connection@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="detail">
+                            <h3>Call Us</h3>
+                            <p>XYZ-ABC-EFH-TUV</p>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="detail">
+                            <h3>Our Location</h3>
+                            <p>BLACK AND WHITE HOLE</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="customer_detail">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill in the details below. We'll get back to you soon.</p>
+
+                    <form>
+                        <div class="input_row">
+                            <input type="text" placeholder="Your Name" required>
+
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+
+                        <input type="text" placeholder="Subject" required>
+
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+
+                        <button type="submit">Send Message ➜</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    
+
+    <footer>
+        <h2>BITE<span>VERSE</span></h2>
+        <h4>Good food isn't just eaten, it's felt.</h4>
+        <p>&copy;2026 BITEVERSE. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
