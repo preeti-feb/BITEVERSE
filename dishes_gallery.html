@@ -203,6 +203,122 @@
                 transform: translateX(0px);
             }
         }
+
+
+        @media (max-width:768px) {
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 10px;
+            }
+
+            .name {
+                justify-content: center;
+            }
+
+            .name img {
+                width: 65px;
+            }
+
+            .name h1 {
+                font-size: 25px;
+            }
+
+            header nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0;
+                margin: 5px 0;
+                gap: 15px;
+            }
+
+            .menu {
+                margin-top: 5px;
+            }
+
+            .menu a {
+                display: inline-block;
+                padding: 10px 15px;
+            }
+
+            .left {
+                width: 90%;
+            }
+
+            .left h3 {
+                font-size: 15px;
+            }
+
+            .left h1 {
+                font-size: 50px;
+            }
+
+
+            footer {
+
+                border-top: 1px solid var(--hover-effect);
+                margin-top: 0;
+                border-bottom: 1px solid var(--hover-effect);
+                width: 100%;
+                box-sizing: border-box;
+
+            }
+
+            .boxes {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .boxes span {
+                display: none;
+            }
+
+            .box {
+                width: 45%;
+                box-sizing: border-box;
+                gap: 10px;
+            }
+
+            .box i {
+                font-size: 30px;
+            }
+
+
+            .small-box {
+                line-height: normal;
+
+            }
+
+            .small-box h4,
+            .small-box p {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+
+            .small-box h4 {
+                font-size: 14px;
+            }
+
+            .small-box p {
+                font-size: 15px;
+            }
+
+
+        }
     </style>
 </head>
 

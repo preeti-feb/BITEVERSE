@@ -229,6 +229,78 @@
             text-decoration: none;
             color: var(--main-text);
         }
+
+        @media (max-width:768px) {
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 10px;
+            }
+
+            .name {
+                justify-content: center;
+            }
+
+            .name img {
+                width: 65px;
+            }
+
+            .name h1 {
+                font-size: 25px;
+            }
+
+            header nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0;
+                margin: 5px 0;
+                gap: 15px;
+            }
+
+            .menu {
+                margin-top: 5px;
+            }
+
+            .menu a {
+                display: inline-block;
+                padding: 10px 15px;
+            }
+
+
+            .left {
+                width: 90%;
+            }
+
+            .options {
+                padding: 8px;
+                display: flex;
+                margin: 1%;
+                flex-wrap: wrap;
+            }
+
+            .options a {
+                width: 50px;
+                margin: 5px;
+            }
+
+            .menu_cards {
+                padding: 10px;
+                display: grid;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+        }
     </style>
 </head>
 
