@@ -187,6 +187,7 @@
         .box {
             margin: 20px;
             gap: 20px;
+            width: 80%;
             padding: 10px;
             display: flex;
             border: 2px solid var(--border);
@@ -311,6 +312,120 @@
                 opacity: 1;
                 transform: translateX(0px);
             }
+        }
+
+        @media (max-width:768px) {
+            header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 10px;
+            }
+
+            .name {
+                justify-content: center;
+            }
+
+            .name img{
+                width: 65px;
+            }
+
+            .name h1{
+                font-size: 25px;
+            }
+
+            header nav{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 0;
+                margin: 5px 0;
+                gap: 15px;
+            }
+
+            .menu{
+                margin-top: 5px;
+            }
+
+            .menu a{
+                display: inline-block;
+                padding: 10px 15px;
+            }
+
+           .left{
+            width: 90%;
+            margin: 0% 1% 0% 1%;
+           }
+
+           .left h3{
+            font-size: 15px;
+           }
+
+           .left h1{
+            font-size: 40px;
+           }
+
+           .up{
+            width: 90%;
+            padding: 15px;
+           }
+
+           .up h2{
+            margin: 0 auto;
+            font-size: 30px;
+        }
+        
+        .up p{
+               margin: 0 auto;
+
+           }
+
+           .contact_info{
+            display: flex;
+            flex-direction: column;
+           }
+
+
+           .info{
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+
+           }
+           
+           .box{
+            margin: 10px auto;
+           }
+
+           .box i{
+            font-size: 40px;
+           }
+
+           .detail{
+            margin: 0;
+           }
+
+           .detail h3{
+            font-size: 13px;
+           }
+
+           .detail p{
+            font-size: 8px;
+           }
+
+           .customer_detail{
+            width: 90%;
+           }
+
         }
     </style>
 </head>
