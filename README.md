@@ -26,9 +26,11 @@ It is made up of clean layouts, initiative navigation to create an enjoyable and
 To run or view this repository locally on your computer, follow these steps:
 
 1. **Clone the repository**:
+   ```bash
    git clone https://github.com/preeti-feb/BITEVERSE.git
-2. Open the project in VS Code
-3. Open home_page.html in your web browser to view the project
+   ```
+3. Open the project in VS Code
+4. Open home_page.html in your web browser to view the project
 
 ## Created by:
 
